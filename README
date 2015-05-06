@@ -1,0 +1,28 @@
+RESTAPI-CLIENT
+
+This lib is used for call RestApi services.
+
+Installing
+
+In your python environment use this command:
+
+$ pip install restapi-client
+
+
+Usage
+
+Format of calls:
+
+    <myserver.com>.<endpoint>.[save,get(id),get_all,delete(id),update(id,data)]
+
+Example:
+
+
+from restapi import Client
+api = Client()
+ret = api.<endpointname>.get()
+api.<endpointname>.save(dict_data)
+ret = api.<endpointname>.get("<the_id>")
+api.<endpointname>.update("<the_id>", dict_data)
+api.<endpointname>.delete("<the_id>")
+
